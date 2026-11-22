@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" font-family="'Segoe UI Variable Display','Segoe UI',Inter,-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" role="img" aria-label="How we work">
+<style>
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  .fade { opacity: 0; animation: fade .9s ease-out forwards; }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+</style><defs>
+  <linearGradient id="p-acc" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#5FE3AE"/><stop offset=".55" stop-color="#38BDF8"/><stop offset="1" stop-color="#818CF8"/>
+  </linearGradient>
+  <linearGradient id="p-bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0A0F1E"/><stop offset="1" stop-color="#0E1630"/>
+  </linearGradient>
+  <pattern id="p-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+    <path d="M32 0H0V32" fill="none" stroke="#1A2442" stroke-width="1"/>
+  </pattern></defs>
+<text x="0" y="18" font-size="13" font-weight="700" letter-spacing="2.4" fill="url(#p-acc)">HOW WE WORK</text>
+  <text x="0" y="54" font-size="30" font-weight="700" letter-spacing="-.6" fill="#EAF0FA">Engineering that earns trust</text>
+    <g class="fade" style="animation-delay:0s" transform="translate(0 84)">
+      <rect x=".5" y=".5" width="387" height="160" rx="18" fill="#111A31" stroke="#22304F"/>
+      <text x="28" y="56" font-size="40" font-weight="750" letter-spacing="-1" fill="url(#p-acc)">01</text>
+      <text x="28" y="94" font-size="19" font-weight="650" fill="#EAF0FA">Built for production</text>
+      <text x="28" y="118" font-size="14.5" fill="#8E9CB8">Systems that handle real money,</text>
+      <text x="28" y="137" font-size="14.5" fill="#8E9CB8">real records and real people.</text>
+    </g>
+    <g class="fade" style="animation-delay:0.1s" transform="translate(406 84)">
+      <rect x=".5" y=".5" width="387" height="160" rx="18" fill="#111A31" stroke="#22304F"/>
+      <text x="28" y="56" font-size="40" font-weight="750" letter-spacing="-1" fill="url(#p-acc)">02</text>
+      <text x="28" y="94" font-size="19" font-weight="650" fill="#EAF0FA">Local by design</text>
+      <text x="28" y="118" font-size="14.5" fill="#8E9CB8">Azerbaijani language, local payment</text>
+      <text x="28" y="137" font-size="14.5" fill="#8E9CB8">rails and regulations from day one.</text>
+    </g>
+    <g class="fade" style="animation-delay:0.2s" transform="translate(812 84)">
+      <rect x=".5" y=".5" width="387" height="160" rx="18" fill="#111A31" stroke="#22304F"/>
+      <text x="28" y="56" font-size="40" font-weight="750" letter-spacing="-1" fill="url(#p-acc)">03</text>
+      <text x="28" y="94" font-size="19" font-weight="650" fill="#EAF0FA">Long-term partner</text>
+      <text x="28" y="118" font-size="14.5" fill="#8E9CB8">We ship, support and evolve —</text>
+      <text x="28" y="137" font-size="14.5" fill="#8E9CB8">not hand over and disappear.</text>
+    </g>
+</svg>

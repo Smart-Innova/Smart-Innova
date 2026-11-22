@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" font-family="'Segoe UI Variable Display','Segoe UI',Inter,-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" role="img" aria-label="Featured product: Binam.az">
+<style>
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  .fade { opacity: 0; animation: fade .9s ease-out forwards; }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  .float { animation: float 6s ease-in-out infinite; }
+  @keyframes float { 0%,100% { transform: translate(800px,30px); } 50% { transform: translate(800px,18px); } }
+  .ring { animation: spin 40s linear infinite; transform-origin: 910px 200px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+<defs>
+  <linearGradient id="f-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B3B2C"/><stop offset="1" stop-color="#06261C"/></linearGradient>
+  <radialGradient id="f-glow" cx=".75" cy=".4" r=".55"><stop offset="0" stop-color="#5FE3AE" stop-opacity=".35"/><stop offset="1" stop-color="#5FE3AE" stop-opacity="0"/></radialGradient>
+  <pattern id="f-dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#FFFFFF" fill-opacity=".08"/></pattern>
+  <clipPath id="f-clip"><rect width="1200" height="400" rx="24"/></clipPath>
+</defs>
+<g clip-path="url(#f-clip)">
+  <rect width="1200" height="400" fill="url(#f-bg)"/>
+  <rect width="1200" height="400" fill="url(#f-dots)"/>
+  <rect width="1200" height="400" fill="url(#f-glow)"/>
+  <g class="ring" fill="none" stroke="#5FE3AE" stroke-opacity=".18">
+    <circle cx="910" cy="200" r="210" stroke-dasharray="4 10"/>
+    <circle cx="910" cy="200" r="290" stroke-dasharray="2 14"/>
+  </g>
+  <g class="fade">
+    <rect x="64" y="52" width="150" height="28" rx="14" fill="#FFFFFF" fill-opacity=".1" stroke="#5FE3AE" stroke-opacity=".45"/>
+    <circle cx="82" cy="66" r="4" fill="#5FE3AE"/>
+    <text x="94" y="71" font-size="12.5" font-weight="700" letter-spacing="1.6" fill="#5FE3AE">IN PROGRESS</text>
+    <text x="62" y="134" font-size="52" font-weight="750" letter-spacing="-1.6" fill="#FFFFFF">Binam<tspan fill="#5FE3AE">.az</tspan></text>
+    <text x="330" y="134" font-size="20" fill="#BFEBD9">Bina idarəetmə tətbiqi</text>
+  </g>
+    <g class="fade" style="animation-delay:0.3s" transform="translate(64 178)">
+      <rect width="34" height="34" rx="10" fill="#FFFFFF" fill-opacity=".1" stroke="#5FE3AE" stroke-opacity=".5"/>
+      <path d="M10 17.5 15 22l9-10" fill="none" stroke="#5FE3AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="50" y="14" font-size="16.5" font-weight="650" fill="#FFFFFF">Payments &amp; debts</text>
+      <text x="50" y="33" font-size="14" fill="#BFEBD9">Residents see and pay utility bills in seconds</text>
+    </g>
+    <g class="fade" style="animation-delay:0.42s" transform="translate(64 234)">
+      <rect width="34" height="34" rx="10" fill="#FFFFFF" fill-opacity=".1" stroke="#5FE3AE" stroke-opacity=".5"/>
+      <path d="M10 17.5 15 22l9-10" fill="none" stroke="#5FE3AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="50" y="14" font-size="16.5" font-weight="650" fill="#FFFFFF">Requests &amp; repairs</text>
+      <text x="50" y="33" font-size="14" fill="#BFEBD9">Report an issue with a photo, track it to done</text>
+    </g>
+    <g class="fade" style="animation-delay:0.54s" transform="translate(64 290)">
+      <rect width="34" height="34" rx="10" fill="#FFFFFF" fill-opacity=".1" stroke="#5FE3AE" stroke-opacity=".5"/>
+      <path d="M10 17.5 15 22l9-10" fill="none" stroke="#5FE3AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="50" y="14" font-size="16.5" font-weight="650" fill="#FFFFFF">Announcements &amp; polls</text>
+      <text x="50" y="33" font-size="14" fill="#BFEBD9">Managers reach every flat instantly</text>
+    </g>
+  <g class="fade" style="animation-delay:.7s" transform="translate(1060 64)" font-family="'JetBrains Mono','Cascadia Code',SFMono-Regular,Consolas,Menlo,monospace" font-size="12.5" fill="#BFEBD9">
+    <text y="0">iOS · Android</text><text y="22">Flutter</text><text y="44">Spring Boot</text><text y="66">Oracle</text>
+  </g>
+  <g class="float" transform="translate(800 30)">
+    <rect width="220" height="440" rx="36" fill="#0A1712" stroke="#2C5A49" stroke-width="2"/>
+    <rect x="10" y="10" width="200" height="420" rx="28" fill="#F4FAF7"/>
+    <rect x="80" y="20" width="60" height="16" rx="8" fill="#0A1712"/>
+    <text x="26" y="66" font-size="11" fill="#5B6B65">Salam, Aysel</text>
+    <text x="26" y="86" font-size="16" font-weight="700" fill="#0B1F18">Mənzil 42</text>
+    <rect x="22" y="100" width="176" height="88" rx="16" fill="#0B7A54"/>
+    <text x="36" y="124" font-size="11" fill="#BFEBD9">Ümumi borc</text>
+    <text x="36" y="152" font-size="24" font-weight="700" fill="#FFFFFF">0.00 ₼</text>
+    <rect x="36" y="162" width="70" height="16" rx="8" fill="#5FE3AE"/><text x="71" y="174" text-anchor="middle" font-size="9.5" font-weight="700" fill="#065038">ÖDƏNİLDİ</text>
+    <rect x="22" y="200" width="176" height="38" rx="12" fill="#FFFFFF" stroke="#E1EDE7"/>
+    <circle cx="42" cy="219" r="9" fill="#E7F6EF"/>
+    <text x="58" y="223" font-size="12" font-weight="600" fill="#0B1F18">Su</text>
+    <text x="186" y="223" text-anchor="end" font-size="12" fill="#5B6B65">12.40 ₼</text>
+    <rect x="22" y="246" width="176" height="38" rx="12" fill="#FFFFFF" stroke="#E1EDE7"/>
+    <circle cx="42" cy="265" r="9" fill="#E7F6EF"/>
+    <text x="58" y="269" font-size="12" font-weight="600" fill="#0B1F18">Qaz</text>
+    <text x="186" y="269" text-anchor="end" font-size="12" fill="#5B6B65">18.75 ₼</text>
+    <rect x="22" y="292" width="176" height="38" rx="12" fill="#FFFFFF" stroke="#E1EDE7"/>
+    <circle cx="42" cy="311" r="9" fill="#E7F6EF"/>
+    <text x="58" y="315" font-size="12" font-weight="600" fill="#0B1F18">Servis</text>
+    <text x="186" y="315" text-anchor="end" font-size="12" fill="#5B6B65">25.00 ₼</text>
+  </g>
+</g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="120" viewBox="0 0 1200 120" font-family="'Segoe UI Variable Display','Segoe UI',Inter,-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" role="img" aria-label="Smart Innova">
+<style>
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  .wave { animation: wave 10s linear infinite; }
+  @keyframes wave { to { transform: translateX(-600px); } }
+</style>
+<defs>
+  <linearGradient id="z-acc" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#5FE3AE"/><stop offset=".55" stop-color="#38BDF8"/><stop offset="1" stop-color="#818CF8"/>
+  </linearGradient>
+  <linearGradient id="z-bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0A0F1E"/><stop offset="1" stop-color="#0E1630"/>
+  </linearGradient>
+  <pattern id="z-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+    <path d="M32 0H0V32" fill="none" stroke="#1A2442" stroke-width="1"/>
+  </pattern><clipPath id="z-c"><rect width="1200" height="120"/></clipPath></defs>
+<g clip-path="url(#z-c)">
+  <g class="wave" fill="none" stroke="url(#z-acc)" stroke-width="2" opacity=".6">
+    <path d="M0 36 q150 -26 300 0 t300 0 M600 36 q150 -26 300 0 t300 0 M1200 36 q150 -26 300 0 t300 0 M1800 36 q150 -26 300 0 t300 0 M2400 36 q150 -26 300 0 t300 0 M3000 36 q150 -26 300 0 t300 0"/>
+  </g>
+</g>
+<text x="600" y="86" text-anchor="middle" font-size="15" fill="#8E9CB8">Smart Innova · Enterprise software from Azerbaijan</text>
+</svg>
