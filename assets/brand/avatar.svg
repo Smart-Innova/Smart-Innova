@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-label="Smart Innova">
+<defs><linearGradient id="av-g" gradientUnits="userSpaceOnUse" x1="279.20000000000005" y1="325.2" x2="720.8" y2="674.8">
+      <stop offset="0" stop-color="#5FE3AE"/><stop offset=".5" stop-color="#38BDF8"/><stop offset="1" stop-color="#818CF8"/></linearGradient>
+  <linearGradient id="av-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0C1328"/><stop offset="1" stop-color="#070B17"/></linearGradient>
+  <radialGradient id="av-o1"><stop offset="0" stop-color="#5FE3AE" stop-opacity=".30"/><stop offset="1" stop-color="#5FE3AE" stop-opacity="0"/></radialGradient>
+  <radialGradient id="av-o2"><stop offset="0" stop-color="#818CF8" stop-opacity=".34"/><stop offset="1" stop-color="#818CF8" stop-opacity="0"/></radialGradient>
+  <pattern id="av-grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#1A2442" stroke-width="1.5"/></pattern>
+  <radialGradient id="av-vig" cx=".5" cy=".5" r=".6"><stop offset=".55" stop-color="#070B17" stop-opacity="0"/><stop offset="1" stop-color="#070B17" stop-opacity=".9"/></radialGradient>
+  <filter id="av-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="38"/></filter>
+</defs>
+<rect width="1000" height="1000" fill="url(#av-bg)"/>
+<rect width="1000" height="1000" fill="url(#av-grid)" opacity=".8"/>
+<circle cx="260" cy="250" r="420" fill="url(#av-o1)"/>
+<circle cx="760" cy="780" r="440" fill="url(#av-o2)"/>
+<rect width="1000" height="1000" fill="url(#av-vig)"/>
+<g filter="url(#av-blur)" opacity=".55"><g fill="url(#av-g)">
+      <rect x="279.20000000000005" y="325.2" width="441.59999999999997" height="92" rx="46"/>
+      <rect x="279.20000000000005" y="454" width="266.8" height="92" rx="46"/>
+      <rect x="453.99999999999994" y="582.8" width="266.8" height="92" rx="46"/>
+    </g></g>
+<g fill="url(#av-g)">
+      <rect x="279.20000000000005" y="325.2" width="441.59999999999997" height="92" rx="46"/>
+      <rect x="279.20000000000005" y="454" width="266.8" height="92" rx="46"/>
+      <rect x="453.99999999999994" y="582.8" width="266.8" height="92" rx="46"/>
+    </g>
+</svg>

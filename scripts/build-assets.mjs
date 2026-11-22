@@ -66,12 +66,12 @@ function header(t, mode) {
   }).join("");
 
   // Logo mark: three stacked rounded bars forming an abstract "S"
+  const hm = mark(10.4, 14.9, 9, `${id}-mark`, [t.a1, t.a2, t.a3]);
   const logo = `
     <g transform="translate(72 64)">
+      <defs>${hm.defs}</defs>
       <rect width="64" height="64" rx="18" fill="${t.surface}" stroke="${t.border}"/>
-      <rect x="14" y="15" width="36" height="9" rx="4.5" fill="url(#${id}-acc)"/>
-      <rect x="14" y="27.5" width="22" height="9" rx="4.5" fill="${t.a2}" opacity=".85"/>
-      <rect x="28" y="40" width="22" height="9" rx="4.5" fill="${t.a3}" opacity=".85"/>
+      ${hm.body}
     </g>`;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" font-family="${FONT}" role="img" aria-label="Smart Innova — enterprise software studio">
@@ -336,4 +336,68 @@ for (const [mode, t] of Object.entries(THEMES)) {
     writeFileSync(join(OUT, `${name}-${mode}.svg`), fn(t, mode).replace(/\n\s*\n/g, "\n"));
   }
 }
+// ---------- Logo ----------
+// The mark: three rounded bars forming an abstract "S", one diagonal gradient across all.
+function mark(x, y, s, id, colors = ["#5FE3AE", "#38BDF8", "#818CF8"]) {
+  // unit grid: bar height 1, gap .4, full width 4.8, short width 2.9
+  const h = s, g = s * 0.4, full = s * 4.8, short = s * 2.9;
+  const totalH = 3 * h + 2 * g;
+  return {
+    defs: `<linearGradient id="${id}" gradientUnits="userSpaceOnUse" x1="${x}" y1="${y}" x2="${x + full}" y2="${y + totalH}">
+      <stop offset="0" stop-color="${colors[0]}"/><stop offset=".5" stop-color="${colors[1]}"/><stop offset="1" stop-color="${colors[2]}"/></linearGradient>`,
+    body: `<g fill="url(#${id})">
+      <rect x="${x}" y="${y}" width="${full}" height="${h}" rx="${h / 2}"/>
+      <rect x="${x}" y="${y + h + g}" width="${short}" height="${h}" rx="${h / 2}"/>
+      <rect x="${x + full - short}" y="${y + 2 * (h + g)}" width="${short}" height="${h}" rx="${h / 2}"/>
+    </g>`,
+    w: full, h: totalH,
+  };
+}
+
+function avatar() {
+  const S = 1000, s = 92;
+  const m = mark((S - s * 4.8) / 2, (S - (3 * s + 2 * s * 0.4)) / 2, s, "av-g");
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${S}" height="${S}" viewBox="0 0 ${S} ${S}" role="img" aria-label="Smart Innova">
+<defs>${m.defs}
+  <linearGradient id="av-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0C1328"/><stop offset="1" stop-color="#070B17"/></linearGradient>
+  <radialGradient id="av-o1"><stop offset="0" stop-color="#5FE3AE" stop-opacity=".30"/><stop offset="1" stop-color="#5FE3AE" stop-opacity="0"/></radialGradient>
+  <radialGradient id="av-o2"><stop offset="0" stop-color="#818CF8" stop-opacity=".34"/><stop offset="1" stop-color="#818CF8" stop-opacity="0"/></radialGradient>
+  <pattern id="av-grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#1A2442" stroke-width="1.5"/></pattern>
+  <radialGradient id="av-vig" cx=".5" cy=".5" r=".6"><stop offset=".55" stop-color="#070B17" stop-opacity="0"/><stop offset="1" stop-color="#070B17" stop-opacity=".9"/></radialGradient>
+  <filter id="av-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="38"/></filter>
+</defs>
+<rect width="${S}" height="${S}" fill="url(#av-bg)"/>
+<rect width="${S}" height="${S}" fill="url(#av-grid)" opacity=".8"/>
+<circle cx="260" cy="250" r="420" fill="url(#av-o1)"/>
+<circle cx="760" cy="780" r="440" fill="url(#av-o2)"/>
+<rect width="${S}" height="${S}" fill="url(#av-vig)"/>
+<g filter="url(#av-blur)" opacity=".55">${m.body}</g>
+${m.body}
+</svg>`;
+}
+
+function logoMark() {
+  const S = 512, s = 64;
+  const m = mark((S - s * 4.8) / 2, (S - (3 * s + 2 * s * 0.4)) / 2, s, "lm-g");
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${S}" height="${S}" viewBox="0 0 ${S} ${S}" role="img" aria-label="Smart Innova"><defs>${m.defs}</defs>${m.body}</svg>`;
+}
+
+function logoFull(t, mode) {
+  const W = 760, H = 160, s = 26;
+  const m = mark(24, (H - (3 * s + 2 * s * 0.4)) / 2, s, `lf-${mode}`, mode === "dark" ? ["#5FE3AE", "#38BDF8", "#818CF8"] : ["#0B7A54", "#0284C7", "#4F46E5"]);
+  const tx = 24 + m.w + 36;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" font-family="${FONT}" role="img" aria-label="Smart Innova">
+<defs>${m.defs}${defs(t, "lf")}</defs>
+${m.body}
+<text x="${tx}" y="98" font-size="64" font-weight="700" letter-spacing="-2" fill="${t.text}">Smart <tspan fill="url(#lf-acc)">Innova</tspan></text>
+<text x="${tx + 3}" y="130" font-size="15" font-weight="600" letter-spacing="4.5" fill="${t.muted}">SOFTWARE STUDIO</text>
+</svg>`;
+}
+
+const BRAND = join(OUT, "brand");
+mkdirSync(BRAND, { recursive: true });
+writeFileSync(join(BRAND, "avatar.svg"), avatar());
+writeFileSync(join(BRAND, "logo-mark.svg"), logoMark());
+for (const [mode, t] of Object.entries(THEMES)) writeFileSync(join(BRAND, `logo-${mode}.svg`), logoFull(t, mode));
+
 console.log("assets written to", OUT);

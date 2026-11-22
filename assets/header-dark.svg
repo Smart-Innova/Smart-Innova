@@ -53,10 +53,14 @@
   </g>
   <g class="fade" style="animation-delay:.05s">
     <g transform="translate(72 64)">
+      <defs><linearGradient id="h-mark" gradientUnits="userSpaceOnUse" x1="10.4" y1="14.9" x2="53.599999999999994" y2="49.1">
+      <stop offset="0" stop-color="#5FE3AE"/><stop offset=".5" stop-color="#38BDF8"/><stop offset="1" stop-color="#818CF8"/></linearGradient></defs>
       <rect width="64" height="64" rx="18" fill="#111A31" stroke="#22304F"/>
-      <rect x="14" y="15" width="36" height="9" rx="4.5" fill="url(#h-acc)"/>
-      <rect x="14" y="27.5" width="22" height="9" rx="4.5" fill="#38BDF8" opacity=".85"/>
-      <rect x="28" y="40" width="22" height="9" rx="4.5" fill="#818CF8" opacity=".85"/>
+      <g fill="url(#h-mark)">
+      <rect x="10.4" y="14.9" width="43.199999999999996" height="9" rx="4.5"/>
+      <rect x="10.4" y="27.5" width="26.099999999999998" height="9" rx="4.5"/>
+      <rect x="27.499999999999996" y="40.1" width="26.099999999999998" height="9" rx="4.5"/>
+    </g>
     </g></g>
   <g class="fade" style="animation-delay:.15s">
     <text x="156" y="94" font-size="15" font-weight="600" letter-spacing="2.5" fill="#8E9CB8">SOFTWARE STUDIO</text>
